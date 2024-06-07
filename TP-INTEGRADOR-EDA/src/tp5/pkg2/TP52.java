@@ -48,7 +48,9 @@ public class TP52 {
                     arbol.buscar(valorBuscado,0);
                     break;
                 case 3:
-                    arbol.imprimirRuta();
+                    System.out.println("Ingrese el valor a buscar:");
+                    int valorBuscadoAImprimir= sc.nextInt();
+                    arbol.buscarImprimirRuta(valorBuscadoAImprimir);
                     break;
                 case 4:
                     System.out.println("Adios!!");
