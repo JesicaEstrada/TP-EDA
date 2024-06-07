@@ -17,20 +17,19 @@ public class TP52 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        
+      
         
 //        Construir el árbol mediante inserciones
-//Buscar una melodía específico por su número de identificación
-//Mostrar el camino recorrido para encontrar la melodía
-//
+//        Buscar una melodía específico por su número de identificación
+//        Mostrar el camino recorrido para encontrar la melodía
+
         Scanner sc= new Scanner(System.in);
-        System.out.println("Ingrese el tamaño");
-        int tamanio= sc.nextInt();
+        
+        int tamanio= 1000;
         int opcion;
         Arbol arbol = new Arbol(tamanio);
         do{
-            System.out.println("MENU");
+            System.out.println("\nMENU");
             System.out.println("1- Ingresar numero de una cacion");
             System.out.println("2- Buscar cancion por número de identificación");
             System.out.println("3- Mostrar el camino recorrido para encontrar la melodía");
@@ -56,12 +55,9 @@ public class TP52 {
                     System.out.println("Adios!!");
                     break;
                 default:
-                    System.out.println("No se encuentra en el menu");
-                    
+                    System.out.println("No se encuentra en el menu");               
             }
         }while(opcion != 4);
          sc.close();
     }
-    
-    
 }

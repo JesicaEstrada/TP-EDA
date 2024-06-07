@@ -24,7 +24,7 @@ public class Arbol {
     public void insertar(int valor) {
 
         if (pilaLlena()) {
-            System.out.println("se lleno el arbol");
+            System.out.println("Se lleno el arbol");
         } else {
             int i = 0;
             while (arreglo[i] != -1) {
@@ -45,7 +45,7 @@ public class Arbol {
 
     public void buscar(int valor, int indice) {
         if(indice >= arreglo.length  ){
-            System.out.println("no se encontro el valor ");
+            System.out.println("No se encontro el valor: " + valor);
             return;
          
         }
@@ -63,12 +63,16 @@ public class Arbol {
 
     public void imprimirRuta(int valor,int indice,int indEnc, int[] encontrado) {
        if(indice >= arreglo.length  ){
-            System.out.println("no se encontro el valor ");
+            System.out.println("No se encontro el valor ");
             return;
         }
+       if(valor==arreglo[0]){
+           System.out.println("El valor " + valor + " es el elemento raiz.");
+           return;
+       }
         if(arreglo[indice] == valor){
             System.out.println("El valor se encuntra en el indice: " + indice);
-            System.out.println("RUTA");
+            System.out.println("RUTA para llegar a la melodia " + valor);
             for (int i = 0; i < indEnc; i++) {
                 System.out.println(encontrado[i]);
             }
