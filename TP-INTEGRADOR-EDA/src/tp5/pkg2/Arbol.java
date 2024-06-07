@@ -13,10 +13,10 @@ public class Arbol {
 
     private int[] arreglo;
 
-    public Arbol(int tamanio) {
-        arreglo = new int[tamanio];
+    public Arbol() {
+        arreglo = new int[1000];
         
-        for (int i = 0; i < tamanio; i++) {
+        for (int i = 0; i < arreglo.length; i++) {
             arreglo[i] = -1;
         }
     }

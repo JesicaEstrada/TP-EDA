@@ -25,12 +25,11 @@ public class TP52 {
 
         Scanner sc= new Scanner(System.in);
         
-        int tamanio= 1000;
         int opcion;
-        Arbol arbol = new Arbol(tamanio);
+        Arbol arbol = new Arbol();
         do{
             System.out.println("\nMENU");
-            System.out.println("1- Ingresar numero de una cacion");
+            System.out.println("1- Ingresar numero de una cancion");
             System.out.println("2- Buscar cancion por número de identificación");
             System.out.println("3- Mostrar el camino recorrido para encontrar la melodía");
             System.out.println("4- Salir");
