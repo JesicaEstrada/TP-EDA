@@ -24,16 +24,23 @@ public class Arbol {
     }
     public void insertar(int valor){
         
-        int i=0;
-        
-        while( arreglo[i] != -1){
-            if(valor > arreglo[i]){
-                i= (2*i)+2;
-            }else{
-                i= (2*i)+1;
+        if(pilaLlena()){
+            System.out.println("se lleno el arbol");
+        }else{
+            int i=0;
+            while( arreglo[i] != -1){
+                if(valor > arreglo[i]){
+                    i= (2*i)+2;
+                }else{
+                    i= (2*i)+1;
+                }
+                if(i >= arreglo.length){
+                    System.out.println("Fuera de los limites del arreglo");
+                    return;
+                }
             }
+            arreglo[i]=valor;
         }
-        arreglo[i]=valor;
     }
     
     public void buscar(int valor,int indice){
@@ -73,7 +80,15 @@ public class Arbol {
         }else{
             System.out.println("Busque otro valor para obtener una ruta");
         }
-        
-        
+    }
+    public boolean pilaLlena(){
+        boolean verdadero=true;
+        for (int i = 0; i < arreglo.length; i++) {
+            if(arreglo[i] == -1){
+                verdadero = false;
+                return verdadero;
+            }
+        }
+        return verdadero;
     }
 }
